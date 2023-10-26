@@ -12,7 +12,8 @@ func TestThreadInitialization(t *testing.T) {
 
 	assert.True(t, PyEval_ThreadsInitialized())
 
-	PyEval_ReInitThreads()
+	// remove PyEval_ReInitThreads as it has been removed in Python 3.8
+	// PyEval_ReInitThreads()
 }
 
 func TestGIL(t *testing.T) {
